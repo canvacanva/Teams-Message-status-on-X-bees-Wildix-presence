@@ -57,7 +57,7 @@ WildixNumber="99999"
 	echo "Wildix Number"
 	echo $WildixNumber
 
-# SET WILDIX PRESENCE
+# SET WILDIX MESSAGE STATUS 
 
 current_status=$(curl -s -X GET -u $WAPIuser:$WAPIpsw 'http://'$WPBX'/api/v1/User/'$WildixNumber'/Presence' | jq -r '.result.show')
 #Se è vuoto, sarà available
